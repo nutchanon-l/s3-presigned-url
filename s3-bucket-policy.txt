@@ -1,0 +1,14 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "s3-presigned-read-only",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "{User ARN}"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::{S3 Bucket}/*"
+        }
+    ]
+}
